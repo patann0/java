@@ -1,42 +1,36 @@
 import javafx.application.Application;
-import javafx.scene.Group;
 import javafx.scene.Scene;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
+public class JUB extends Application {
+    public void start(Stage stage){
+        stage.setWidth(300);
+        stage.setHeight(200);
 
+        Button button1 = new Button("ABC");
+        Button button2 = new Button("DEF");
+        Button button3 = new Button("GHI");
 
-public class JUB extends Application{
-	public void start(Stage stage){
-		stage.setWidth(300);
-		stage.setHeight(300);
+        button1.setPrefSize(100,100);
+        button2.setPrefSize(100,100);
+        button3.setPrefSize(100,100);
 
-		Rectangle rec = new Rectangle(10,20,60,40);
-		rec.setFill(Color.PURPLE);
+        HBox root = new HBox(10);
 
-		Circle cir = new Circle(120,40,25);
-		cir.setFill(Color.YELLOW);
+        root.getChildren().addAll(button1, button2, button3);
 
-		Group roo = new Group();
-		roo.getChildren().addAll(rec,cir);
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
 
-		Scene scene = new Scene(roo);
+        stage.show();
 
-		stage.setScene(scene);
-
-		stage.show();
-	}
-
-
-
-
+    }
 
 
 	public static void main(String[] args){
-		launch();
 		Runtime.getRuntime().gc();
-
+		launch();
 	}
 }
