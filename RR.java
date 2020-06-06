@@ -4,7 +4,7 @@ public class RR{
 		int b = 0;
 		try{
 			int c = a / b;
-			System.out.println("ぬぬーん" + c);
+			System.out.println("whats_up" + c);
 		}
 		catch(ArithmeticException e){
 
