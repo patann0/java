@@ -8,9 +8,6 @@ import javafx.stage.Stage;
 
 
 
-
-
-
 public class AAAA extends Application {
 
 	public void start(Stage stage) {
